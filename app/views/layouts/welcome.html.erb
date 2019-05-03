@@ -11,8 +11,8 @@
 
   <body class="welcome-background">
     <header class="header-bar">
-      <h1><%= link_to "App Name", welcome_index_path, class: "dark-gray app-name" %></h1>
-      <p>Already have an account? <%= link_to "Sign in", new_user_session_path, class: "btn btn-outline-dark" %></p>
+      <p><%= link_to "App Name", welcome_index_path, class: "dark-gray app-name" %></p>
+      <p class="header-text">Already have an account? <%= link_to "Sign in", new_user_session_path %></p>
     </header>
 
     <% if notice %>

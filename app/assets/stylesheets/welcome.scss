@@ -1,3 +1,5 @@
+@import "colors";
+
 .welcome-background {
 	background-image: url("welcome_background.png");
 	background-size: 100% 100%;
@@ -6,7 +8,38 @@
 }
 
 .app-name {
+	color: $dark-gray;
 	font-size: 26px;
 	font-weight: 600;
 	margin-left: 34px;
+}
+
+.big-font {
+	color: $purple;
+	font-size: 50px;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+
+.sub-text {
+	color: $light-purple;
+	font-size: 24px;
+	margin-bottom: 100px;
+}
+
+.get-started-button {
+	background: $pink;
+	width: 268px;
+	border-radius: 29.5px;
+}
+
+.header-text {
+	font-size: 18px;
+	margin-right: 64px;
+}
+
+.welcome-box {
+	margin: auto auto;
+	width: 52%;
+	height: 80%;
 }

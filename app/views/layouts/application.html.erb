@@ -9,12 +9,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <header class="header-bar">
-      <div>
-        <h1><%= link_to "App Name", welcome_index_path %></h1>
-        <p>Already have an account? <%= link_to "Sign in", new_user_session_path, class: "btn btn-outline-dark" %></p>
-      </div>
+  <body class="sign-up-background">
+    <header class="header-bar align-middle">
+      <p><%= link_to "App Name", welcome_index_path, class: "dark-gray app-name" %></p>
+      <p class="header-text align-middle">Already have an account? <%= link_to "Sign in", new_user_session_path %></p>
     </header>
 
     <% if notice %>

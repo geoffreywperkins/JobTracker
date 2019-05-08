@@ -45,8 +45,15 @@
 }
 
 .header-text {
+	color: $light-purple;
 	font-size: 18px;
 	margin-right: 64px;
+	margin-bottom: 0px;
+
+	a {
+		margin-left: 18px;
+		color: $purple;
+	}
 }
 
 .welcome-box {

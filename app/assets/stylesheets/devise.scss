@@ -45,12 +45,14 @@ Join:
 .devise-button {
 	width: 300px;
 	border-radius: 28px;
-	color: $pink;
+	background: $pink;
 
 	input {
 		font-size: 30px;
 		color: white;
 		font-weight: bold;
+		background: none;
+		border: none;
 	}
 }
 

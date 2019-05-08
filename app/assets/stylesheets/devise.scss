@@ -1,3 +1,17 @@
+/**
+Sign Up:
+        36px, medium
+Labels:
+        20px
+Inputs:
+        width: 385px, height: 40px, border-bottom: 1px purple, background color: white
+Join btn:
+        width: 300px, border-radius 28
+Join:
+        30px, white, bold
+*/
+
+
 @import "colors";
 
 .devise-background {
@@ -6,3 +20,47 @@
 	background-repeat: no-repeat;
 	height: 100%;
 }
+
+.devise-h1 {
+	font-size: 36px;
+	font-weight: medium;
+	color: $pink;
+}
+
+.devise-field {
+	label {
+		font-size: 20px;
+		color: $purple;
+	}
+
+	input {
+		width: 385px;
+		height: 40px;
+		border-style: none;
+		border-bottom: 1px solid $purple;
+		background-color: $off-white;
+	}
+}
+
+.devise-button {
+	width: 300px;
+	border-radius: 28px;
+	color: $pink;
+
+	input {
+		font-size: 30px;
+		color: white;
+		font-weight: bold;
+	}
+}
+
+/**
+.form-label {
+	font-size: 20px;
+	color: $purple;
+}
+
+.form-inputs {
+
+}
+*/

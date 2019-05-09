@@ -27,7 +27,7 @@
 	margin-bottom: 12%;
 }
 
-.get-started-button {
+.get-started-button, .get-started-button:hover {
 	background: $pink;
 	color: white;
 	font-weight: 400;
@@ -37,11 +37,7 @@
 	width: 268px;
 	height: 60px;
 	border-radius: 29.5px;
-
-	p {
-		margin-top: 3px;
-		margin-bottom: 0px;
-	}
+	padding-top: 4px;
 }
 
 .header-text {

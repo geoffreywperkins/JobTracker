@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_22_020537) do
+ActiveRecord::Schema.define(version: 2019_05_12_223051) do
+
+  create_table "job_apps", force: :cascade do |t|
+    t.string "company"
+    t.string "url"
+    t.text "notes"
+    t.string "status"
+    t.datetime "date_last_updated"
+    t.datetime "submit_date"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_job_apps_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

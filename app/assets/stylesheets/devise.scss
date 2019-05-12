@@ -47,7 +47,8 @@ Join:
 
 .devise-button {
 	width: 100%;
-	margin-top: 50px;
+	margin-top: 40px;
+	margin-bottom: 10px;
 	input {
 		width: 300px;
 		margin: 0px auto;
@@ -63,13 +64,28 @@ Join:
 	}
 }
 
-/**
-.form-label {
-	font-size: 20px;
+.remember-me {
 	color: $purple;
-}
+	text-align: left;
 
-.form-inputs {
+	input {
+		width: 16px;
+		height: 16px;
+		background-color: $off-white;
+		border-radius: 20%;
+		border: 1.5px solid $purple;
+		-webkit-appearance: none;
+		outline: none;
+		cursor: pointer;
+	}
+	input:checked {
+		background-color: $purple;
+	}
 
+	label {
+		font-size: 16px;
+		line-height: 1;
+		margin-top: 3px;
+		vertical-align: top;
+	}
 }
-*/

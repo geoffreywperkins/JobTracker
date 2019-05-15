@@ -1,13 +1,14 @@
 class JobAppsController < ApplicationController
-	def show
-		@job_app = JobApp.find(params[:id])
+	def index
+		@job_apps = current_user.jobApps.all
 	end
 
 	def new
 	end
 
 	def create
-		@job_app = JobApp.new(job_app_params)
+		# @user = User.find(params[:user_id])
+		@job_app = current_user.jobApps.new(job_app_params)
 
 		@job_app.save
 		redirect_to @job_app

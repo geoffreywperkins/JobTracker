@@ -1,1 +1,11 @@
 <h1>THE INDEX PAGE</h1>
+
+<%= link_to "Add an application", new_job_app_path %>
+
+<% @job_apps.each do |job_app| %>
+	<h2>Application:</h2>
+	<h3><%= job_app.company %></h3>
+	<p><%=job_app.status %></p>
+	<p><%=job_app.url %></p>
+	<p><%=job_app.notes %></p>
+<% end %>

@@ -13,7 +13,9 @@
     <header class="header-bar align-middle">
       <p><%= link_to "App Name", welcome_index_path, class: "dark-gray app-name" %></p>
 
-      <% if devise_mapping.registerable? && controller_name != 'registrations' %>
+      <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+      <% elsif devise_mapping.registerable? && controller_name != 'registrations' %>
         <p class="header-text align-middle">Don't have an account? <%= link_to "Get started", new_user_registration_path %></p>
       <% else %>
         <p class="header-text align-middle">Already have an account? <%= link_to "Sign in", new_user_session_path %></p>

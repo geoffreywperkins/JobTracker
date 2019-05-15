@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Geoff's Blog</title>
+    <title>Job Tracker App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -21,7 +21,7 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
     <%= yield %>
   </body>
 </html>

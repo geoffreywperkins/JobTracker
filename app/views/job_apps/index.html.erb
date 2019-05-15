@@ -2,10 +2,22 @@
 
 <%= link_to "Add an application", new_job_app_path %>
 
-<% @job_apps.each do |job_app| %>
-	<h2>Application:</h2>
-	<h3><%= job_app.company %></h3>
-	<p><%=job_app.status %></p>
-	<p><%=job_app.url %></p>
-	<p><%=job_app.notes %></p>
-<% end %>
+<table>
+	<tr>
+		<th>Company</th>
+		<th>Application status</th>
+		<th>Link to application</th>
+		<th>Notes</th>
+	</tr>
+
+	<% @job_apps.each do |job_app| %>
+		<tr>
+			<td><%= job_app.company %></td>
+			<td><%= job_app.status %></td>
+			<td><%= job_app.url %></td>
+			<td><%= job_app.notes %></td>
+			<td><%= link_to "Edit", edit_job_app_path(job_app), class: "btn btn-primary" %></td>
+		</tr>
+	<% end %>
+
+</table>

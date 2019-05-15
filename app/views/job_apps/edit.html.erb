@@ -1,0 +1,30 @@
+<h1>THIS IS THE EDIT PAGE</h1>
+<%= form_with scope: :job_app, url: job_apps_path, local: true do |f| %>
+	<div class="field form-group">
+		<%= f.label :company %><br>
+		<%= f.text_field :company %>
+	</div>
+
+	<div class="field form-group">
+		<%= f.label :status %><br>
+		<%= f.text_field :status %>
+		<!-- Make this^ a dropdown menu -->
+	</div>
+
+	<div class="filed form-group">
+		<%= f.label :url %><br>
+		<%= f.text_field :url %>
+	</div>
+
+	<div class="field form-group">
+		<%= f.label :notes %><br>
+		<%= f.text_area :notes %><br>
+	</div>
+
+	<p>Submit date?????</p>
+
+	<div class="actions d-flex justify-content-center devise-button align-items-center">
+    <%= f.submit "Save" %>
+  </div>
+
+<% end %>

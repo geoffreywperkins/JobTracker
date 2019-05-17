@@ -22,7 +22,7 @@ class JobAppsController < ApplicationController
 		@job_app = current_user.jobApps.find(params[:id])
 
 		if @job_app.update(job_app_params)
-			redirect_to @job_app 			# HOW TO REDIRECT TO INDEX PAGE
+			redirect_to job_apps_path 			# HOW TO REDIRECT TO INDEX PAGE
 		else
 			render "edit"
 		end

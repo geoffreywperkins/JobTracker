@@ -1,5 +1,5 @@
 <h1>THIS IS THE EDIT PAGE</h1>
-<%= form_with scope: :job_app, url: job_apps_path, local: true do |f| %>
+<%= form_with(model: @job_app, local: true) do |f| %>
 	<div class="field form-group">
 		<%= f.label :company %><br>
 		<%= f.text_field :company %>

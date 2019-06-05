@@ -1,3 +1,61 @@
 // Place all the styles related to the JobApp controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import "colors";
+
+.index-main-box {
+	margin: auto auto;
+	width: 90%;
+
+}
+
+.table-headers {
+	background: $light-gray;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 100px;
+	margin: 20px;
+	height: 40px;
+}
+
+.index-table-row {
+	text-align: left;
+	display: flex;
+	height: 25px;
+
+	div {
+		overflow: hidden;
+		width: 5%;
+		margin-right: 5%;
+	}
+
+	.company-name {
+		width: 5%;
+		margin-right: 5%;
+	}
+	.job-app-status {
+		width: 15%;
+		margin-right: 5%;
+	}
+
+	.job-app-url {
+		width: 5%;
+		margin-right: 5%;
+	}
+	
+}
+
+.add-app-button, .add-app-button:hover {
+	background: $pink;
+	color: white;
+	font-weight: 400;
+	font-size: 24px;
+	text-align: center;
+	vertical-align: bottom;
+	width: 268px;
+	height: 60px;
+	border-radius: 29.5px;
+	padding: 6px 20px 10px 20px;
+}

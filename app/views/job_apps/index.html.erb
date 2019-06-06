@@ -1,15 +1,16 @@
-<h1>THE INDEX PAGE</h1>
 
-<%= link_to "+ Add Application", new_job_app_path, class: "add-app-button" %>
+<div class="index-page-box">
+	<%= link_to "Add Application", new_job_app_path, class: "add-app-button" %>
 
-<div class="index-main-box">
-	<% @job_apps.each do |job_app| %>
-		<div class="index-table-row">
-			<div class="company-name"><%= job_app.company %></div>
-			<div class="job-app-status"><%= job_app.status %></div>
-			<div class="job-app-url"><%= job_app.url %></div>
-			<div class="job-app-notes"><%= job_app.notes %></div>
-			<div class="edit-btn"><%= link_to "Edit", edit_job_app_path(job_app) %></div>
-		</div>
-	<% end %>
+	<div class="job-apps-box">
+		<% @job_apps.each do |job_app| %>
+			<div class="index-table-row">
+				<div class="company-name"><%= job_app.company %></div>
+				<div class="job-app-status"><%= job_app.status %></div>
+				<div class="job-app-url"><%= job_app.url %></div>
+				<div class="job-app-notes"><%= job_app.notes %></div>
+				<div class="edit-btn"><%= link_to "Edit", edit_job_app_path(job_app) %></div>
+			</div>
+		<% end %>
+	</div>
 </div>

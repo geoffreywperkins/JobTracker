@@ -5,25 +5,16 @@
 
 @import "colors";
 
-.index-main-box {
-	margin: auto auto;
-	width: 90%;
-
-}
-
-.table-headers {
-	background: $light-gray;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	padding: 100px;
-	margin: 20px;
-	height: 40px;
-}
 
 .index-table-row {
 	text-align: left;
 	display: flex;
-	height: 25px;
+	height: 35px;
+	border: 1px solid $light-purple;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 5px 10px;
+	color: $purple;
 
 	div {
 		overflow: hidden;
@@ -50,12 +41,22 @@
 .add-app-button, .add-app-button:hover {
 	background: $pink;
 	color: white;
-	font-weight: 400;
-	font-size: 24px;
+	font-weight: 600;
+	font-size: 18px;
 	text-align: center;
 	vertical-align: bottom;
 	width: 268px;
 	height: 60px;
 	border-radius: 29.5px;
-	padding: 6px 20px 10px 20px;
+	padding: 5px 15px 7px 15px;
+}
+
+.index-page-box {
+	width: 80%;
+	margin: 10px auto auto auto;
+	text-align: right;
+}
+
+.job-apps-box {
+	margin-top: 10px;
 }

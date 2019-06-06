@@ -41,14 +41,15 @@
 .add-app-button, .add-app-button:hover {
 	background: $pink;
 	color: white;
-	font-weight: 600;
-	font-size: 18px;
+	font-weight: 700;
+	font-size: 16px;
 	text-align: center;
 	vertical-align: bottom;
 	width: 268px;
 	height: 60px;
-	border-radius: 29.5px;
-	padding: 5px 15px 7px 15px;
+	border-radius: 22px;
+	padding: 10px 15px 11px 15px;
+	margin-bottom: 20	px;
 }
 
 .index-page-box {
@@ -59,4 +60,23 @@
 
 .job-apps-box {
 	margin-top: 10px;
+}
+
+.color-bar {
+	width: 100%;
+	height: 10px;
+	border-radius: 3px;
+	background-color: $teal;
+	margin-bottom: 20px;
+}
+
+.index-table-header {
+	text-align: left;
+
+	h2 {
+		color: $purple;
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 3px;
+	}
 }

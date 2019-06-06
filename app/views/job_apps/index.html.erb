@@ -1,6 +1,13 @@
 
 <div class="index-page-box">
 	<%= link_to "Add Application", new_job_app_path, class: "add-app-button" %>
+	<div class="index-table-header">
+		<h2>
+			Job Applications
+		</h2>
+		<div class="color-bar">
+		</div>
+	</div>
 
 	<div class="job-apps-box">
 		<% @job_apps.each do |job_app| %>

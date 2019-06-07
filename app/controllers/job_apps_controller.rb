@@ -15,7 +15,7 @@ class JobAppsController < ApplicationController
 		@job_app = current_user.jobApps.new(job_app_params)
 
 		@job_app.save
-		redirect_to @job_app
+		redirect_to job_apps_path
 	end
 
 	def update

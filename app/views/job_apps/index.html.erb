@@ -12,10 +12,10 @@
 	<div class="job-apps-box">
 		<% @job_apps.each do |job_app| %>
 			<%= link_to job_app_path(job_app), class: "index-table-row" do %>
-					<div class="company-name"><%= job_app.company %></div>
-					<div class="job-app-status"><%= job_app.status %></div>
-					<div class="job-app-url"><%= job_app.url %></div>
-					<div class="job-app-notes"><%= job_app.notes %></div>
+				<div class="company-name"><%= job_app.company %></div>
+				<div class="job-app-status"><%= job_app.status %></div>
+				<div class="job-app-url"><%= job_app.url %></div>
+				<div class="job-app-notes"><%= job_app.notes %></div>
 			<% end %>
 		<% end %>
 	</div>

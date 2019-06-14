@@ -6,7 +6,7 @@
 @import "colors";
 
 
-.index-table-row, .index-table-row:hover {
+.index-table-row {
 	text-align: left;
 	display: flex;
 	height: 40px;
@@ -40,6 +40,12 @@
 	.job-app-notes {
 		width: 10%;
 	}
+}
+
+.index-table-row:hover {
+	background-color: $purple;
+	border-color: $purple;
+	color: $white;
 }
 
 .add-app-button, .add-app-button:hover {

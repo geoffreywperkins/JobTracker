@@ -8,6 +8,7 @@ class JobAppsController < ApplicationController
 	end
 
 	def new
+		@job_app = current_user.jobApps.new
 	end
 
 	def edit

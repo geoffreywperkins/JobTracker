@@ -1,0 +1,15 @@
+<header class="header-bar align-middle">
+	<p><%= link_to "App Name", welcome_index_path, class: "app-name" %></p>
+	<% if user_signed_in? %>
+		<p class="header-text align-middle">
+			<% if controller_name != 'registrations' %>
+				<%= link_to('Edit Profile', edit_user_registration_path) %>
+			<% end %>
+			<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+		</p>
+	<% elsif controller_name != 'welcome' && devise_mapping.registerable? && controller_name != 'registrations' %>
+		<p class="header-text align-middle">Don't have an account? <%= link_to "Get started", new_user_registration_path %></p>
+	<% else %>
+		<p class="header-text align-middle">Already have an account? <%= link_to "Sign in", new_user_session_path %></p>
+	<% end %>
+</header>

@@ -3,6 +3,10 @@ class JobAppsController < ApplicationController
 		@job_apps = current_user.jobApps.all
 	end
 
+	def show
+		@job_app = current_user.jobApps.find(params[:id])
+	end
+
 	def new
 	end
 
@@ -11,7 +15,6 @@ class JobAppsController < ApplicationController
 	end
 
 	def create
-		# @user = User.find(params[:user_id])
 		@job_app = current_user.jobApps.new(job_app_params)
 
 		@job_app.save
@@ -29,7 +32,7 @@ class JobAppsController < ApplicationController
 	end
 
 	private
-		def job_app_params
-			params.require(:job_app).permit(:company, :status, :url, :notes)
-		end
+	def job_app_params
+		params.require(:job_app).permit(:company, :status, :url, :notes)
+	end
 end

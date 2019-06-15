@@ -18,8 +18,11 @@ class JobAppsController < ApplicationController
 	def create
 		@job_app = current_user.jobApps.new(job_app_params)
 
-		@job_app.save
-		redirect_to job_apps_path
+		if @job_app.save
+			redirect_to job_apps_path
+		else
+			render 'new'
+		end
 	end
 
 	def update

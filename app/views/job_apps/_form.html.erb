@@ -1,4 +1,11 @@
 <%= form_for @job_app do |f| %>
+	
+	<% if @job_app.errors.any? %>
+    <div id="error_explanation">
+    	<p>ERROR: The "Company" and "Status" fields are required</p>
+    </div>
+  <% end %>
+
 	<div class="field form-group">
 		<%= f.label :company %><br>
 		<%= f.text_field :company %>

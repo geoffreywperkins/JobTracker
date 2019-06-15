@@ -18,6 +18,7 @@
 
 	div {
 		overflow: hidden;
+		text-overflow: ellipsis;
 		width: 5%;
 		margin-right: 5%;
 		font-weight: 300;
@@ -28,17 +29,15 @@
 		margin-right: 20%;
 		font-weight: 650;
 	}
+
 	.job-app-status {
 		width: 15%;
 		margin-right: 10%;
 	}
 
-	.job-app-url {
-		width: 10%;
-	}
-
 	.job-app-notes {
-		width: 10%;
+		width: 40%;
+		margin-right: 0%;
 	}
 }
 

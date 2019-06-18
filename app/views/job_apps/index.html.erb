@@ -13,8 +13,9 @@
 		<% @job_apps.each do |job_app| %>
 			<%= link_to job_app_path(job_app), class: "index-table-row" do %>
 				<div class="company-name"><%= job_app.company %></div>
+				<div class="position-name"><%= job_app.position_name %></div>
 				<div class="job-app-status"><%= job_app.status %></div>
-				<div class="job-app-notes"><%= job_app.notes %></div>
+				<div class="submit-date"><%= job_app.submit_date %></div>
 			<% end %>
 		<% end %>
 	</div>

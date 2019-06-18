@@ -29,7 +29,7 @@ class JobAppsController < ApplicationController
 		@job_app = find_job_app
 
 		if @job_app.update(job_app_params)
-			redirect_to job_apps_path 			# HOW TO REDIRECT TO INDEX PAGE
+			redirect_to job_apps_path
 		else
 			render "edit"
 		end

@@ -20,24 +20,30 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		width: 5%;
-		margin-right: 5%;
+		margin-right: 10%;
 		font-weight: 300;
 	}
 
 	.company-name {
-		width: 15%;
-		margin-right: 20%;
+		width: 20%;
+		margin-right: 15%;
 		font-weight: 650;
+	}
+
+	.position-name {
+		width: 25%;
+		margin-right: 10%;
 	}
 
 	.job-app-status {
 		width: 15%;
-		margin-right: 10%;
+		margin-right: 5%;
 	}
 
-	.job-app-notes {
-		width: 40%;
+	.submit-date {
+		width: 10%;
 		margin-right: 0%;
+		text-align: right;
 	}
 }
 

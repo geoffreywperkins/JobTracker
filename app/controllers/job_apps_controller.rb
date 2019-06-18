@@ -4,7 +4,7 @@ class JobAppsController < ApplicationController
 	end
 
 	def show
-		@job_app = current_user.jobApps.find(params[:id])
+		@job_app = find_job_app
 	end
 
 	def new
@@ -12,7 +12,7 @@ class JobAppsController < ApplicationController
 	end
 
 	def edit
-		@job_app = current_user.jobApps.find(params[:id])
+		@job_app = find_job_app
 	end
 
 	def create
@@ -26,7 +26,7 @@ class JobAppsController < ApplicationController
 	end
 
 	def update
-		@job_app = current_user.jobApps.find(params[:id])
+		@job_app = find_job_app
 
 		if @job_app.update(job_app_params)
 			redirect_to job_apps_path 			# HOW TO REDIRECT TO INDEX PAGE
@@ -35,8 +35,19 @@ class JobAppsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@article = find_job_app
+		@article.destroy
+	 
+		redirect_to job_apps_path
+	end
+
 	private
 	def job_app_params
 		params.require(:job_app).permit(:position_name, :company, :status, :url, :notes, :submit_date)
+	end
+
+	def find_job_app
+		current_user.jobApps.find(params[:id])
 	end
 end

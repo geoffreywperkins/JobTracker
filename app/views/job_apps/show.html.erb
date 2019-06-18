@@ -8,3 +8,4 @@
 <p>SUBMIT DATE: <%= @job_app.submit_date %></p>
 
 <%= link_to "Edit Application", edit_job_app_path(@job_app), class: "btn btn-outline-primary" %>
+<%= link_to "Delete Application", job_app_path(@job_app), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>

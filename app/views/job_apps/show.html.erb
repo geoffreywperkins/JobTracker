@@ -1,8 +1,10 @@
 <h1>THIS IS THE SHOW PAGE</h1>
 
+<p>POSITION: <%= @job_app.position_name %></p>
 <p>COMPANY: <%= @job_app.company %></p>
 <p>APPLICATION STATUS: <%= @job_app.status %></p>
 <p>URL: <%= @job_app.url %></p>
 <p>NOTES: <%= @job_app.notes %></p>
+<p>SUBMIT DATE: <%= @job_app.submit_date %></p>
 
 <%= link_to "Edit Application", edit_job_app_path(@job_app), class: "btn btn-outline-primary" %>

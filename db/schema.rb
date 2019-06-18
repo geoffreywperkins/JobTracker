@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_16_004142) do
+ActiveRecord::Schema.define(version: 2019_06_18_145446) do
 
   create_table "job_apps", force: :cascade do |t|
     t.string "company"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_06_16_004142) do
     t.text "notes"
     t.string "status"
     t.datetime "date_last_updated"
-    t.datetime "submit_date"
+    t.date "submit_date"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

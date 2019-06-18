@@ -7,6 +7,11 @@
   	<% end %>
 
 	<div class="field devise-field form-group">
+		<%= f.label :position_name, "Position Name (required)" %><br>
+		<%= f.text_field :position_name %><br>
+	</div>
+
+	<div class="field devise-field form-group">
 		<%= f.label :company, "Company (required)" %><br>
 		<%= f.text_field :company %>
 	</div>
@@ -15,6 +20,12 @@
 		<%= f.label :status, "Status (required)" %><br>
 		<%= f.text_field :status %>
 		<!-- Make this^ a dropdown menu -->
+	</div>
+
+	<div class="field devise-field form-group">
+		<%= f.label :submit_date, "Submit Date (YYYY-MM-DD)" %><br>
+		<%= f.text_field :submit_date %><br>
+		<!-- Make this^ the bootstrap datepicker??? -->
 	</div>
 
 	<div class="filed devise-field form-group">
@@ -26,9 +37,6 @@
 		<%= f.label :notes %><br>
 		<%= f.text_area :notes %><br>
 	</div>
-
-	<p>Submit date?????</p>
-	<p>Position name?????</p>
 
 	<div class="actions d-flex justify-content-center devise-button align-items-center">
     	<%= f.submit "Save" %>

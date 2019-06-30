@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_06_18_145446) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "job_apps", force: :cascade do |t|
     t.string "company"
     t.string "url"
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_06_18_145446) do
     t.string "status"
     t.datetime "date_last_updated"
     t.date "submit_date"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "position_name"
@@ -38,4 +41,5 @@ ActiveRecord::Schema.define(version: 2019_06_18_145446) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "job_apps", "users"
 end

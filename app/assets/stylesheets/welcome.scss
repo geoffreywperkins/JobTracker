@@ -1,7 +1,7 @@
 @import "colors";
 
 .welcome-background {
-	background-image: url("welcome_background.png");
+	background-image: image-url("welcome_background.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	height: 100%;
@@ -32,4 +32,3 @@
 	border-radius: 29.5px;
 	padding-top: 4px;
 }
-

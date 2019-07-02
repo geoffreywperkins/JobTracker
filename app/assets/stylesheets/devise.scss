@@ -93,3 +93,13 @@ Join:
 .text-under-button, .text-under-button:hover {
 	color: $purple;
 }
+
+.devise .header-text {
+	a {
+		padding: 7px;
+	}
+	a:hover {
+		background-color: $purple;
+		border-radius: 5px;
+	}
+}

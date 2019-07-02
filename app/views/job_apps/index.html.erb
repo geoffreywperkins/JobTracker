@@ -1,22 +1,28 @@
 
 <div class="index-page-box">
-	<%= link_to "Add Application", new_job_app_path, class: "add-app-button" %>
-	<div class="index-table-header">
-		<h2>
-			Job Applications
-		</h2>
-		<div class="color-bar">
+	<% if @job_apps.any? %>
+		<%= link_to "Add Application", new_job_app_path, class: "add-app-button" %>
+		<div class="index-table-header">
+			<h1>
+				Job Applications
+			</h1>
+			<div class="color-bar">
+			</div>
 		</div>
-	</div>
 
-	<div class="job-apps-box">
-		<% @job_apps.each do |job_app| %>
-			<%= link_to job_app_path(job_app), class: "index-table-row" do %>
-				<div class="company-name"><%= job_app.company %></div>
-				<div class="position-name"><%= job_app.position_name %></div>
-				<div class="job-app-status"><%= job_app.status %></div>
-				<div class="submit-date"><%= job_app.submit_date %></div>
+		<div class="job-apps-box">
+			<% @job_apps.each do |job_app| %>
+				<%= link_to job_app_path(job_app), class: "index-table-row" do %>
+					<div class="company-name"><%= job_app.company %></div>
+					<div class="position-name"><%= job_app.position_name %></div>
+					<div class="job-app-status"><%= job_app.status %></div>
+					<div class="submit-date"><%= job_app.submit_date %></div>
+				<% end %>
 			<% end %>
-		<% end %>
-	</div>
+		</div>
+	<% else %>
+		<div class="empty-prompt"><h2>Store a job application!</h2></div>
+		<%= link_to "Add Application", new_job_app_path, class: "add-app-button" %>
+	<% end %>
+
 </div>

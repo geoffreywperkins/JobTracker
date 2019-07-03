@@ -18,8 +18,7 @@
 
 	<div class="field devise-field form-group">
 		<%= f.label :status, "Status (required)" %><br>
-		<%= f.text_field :status %>
-		<!-- Make this^ a dropdown menu -->
+		<%= f.select(:status, options_for_select([["Saved for later", 1], ["Applied", 2], ["Interview", 3], ["Offer", 4], ["Rejected", 5]], 2)) %>
 	</div>
 
 	<div class="field devise-field form-group">

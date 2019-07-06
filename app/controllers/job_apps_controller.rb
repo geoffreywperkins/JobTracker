@@ -38,8 +38,16 @@ class JobAppsController < ApplicationController
 	def destroy
 		@article = find_job_app
 		@article.destroy
-	 
+
 		redirect_to job_apps_path
+	end
+
+	def edit_job
+		@job_app = current_user.jobApps.new
+	  respond_to do |format|
+	    format.html
+	    format.js
+	  end
 	end
 
 	private

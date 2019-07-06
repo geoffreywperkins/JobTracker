@@ -8,8 +8,8 @@
 			<%= link_to('Log out', destroy_user_session_path, method: :delete) %>
 		</p>
 	<% elsif controller_name != 'welcome' && devise_mapping.registerable? && controller_name != 'registrations' %>
-		<p class="header-text align-middle">Don't have an account? <%= link_to "Get started", new_user_registration_path %></p>
+		<p class="devise header-text align-middle">Don't have an account? <%= link_to "Get started", new_user_registration_path %></p>
 	<% else %>
-		<p class="header-text align-middle">Already have an account? <%= link_to "Sign in", new_user_session_path %></p>
+		<p class="devise header-text align-middle">Already have an account? <%= link_to "Sign in", new_user_session_path %></p>
 	<% end %>
 </header>

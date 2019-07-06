@@ -28,11 +28,7 @@ class JobAppsController < ApplicationController
 	def update
 		@job_app = find_job_app
 
-		if @job_app.update(job_app_params)
-			redirect_to job_apps_path
-		else
-			render "edit"
-		end
+		@job_app.update(job_app_params)
 	end
 
 	def destroy

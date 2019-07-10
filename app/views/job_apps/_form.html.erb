@@ -1,5 +1,5 @@
 <%= form_for @job_app do |f| %>
-	
+
 	<% if @job_app.errors.any? %>
     <div id="error_explanation">
     	<p>ERROR: The "Company" and "Status" fields are required</p>
@@ -24,8 +24,7 @@
 
 	<div class="field devise-field form-group">
 		<%= f.label :submit_date, "Submit Date (YYYY-MM-DD)" %><br>
-		<%= f.text_field :submit_date, onchange: "this.form.submit();" %><br>
-		<!-- Make this^ the bootstrap datepicker??? -->
+		<%= f.text_field :submit_date, {'type'=>"text", 'data-provide'=>'datepicker', onchange: "this.form.submit();"} %>
 	</div>
 
 	<div class="filed devise-field form-group">

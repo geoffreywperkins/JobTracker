@@ -1,23 +1,86 @@
 <div class="index-page-box">
-	<% if @job_apps.any? %>
-		<%= link_to 'Add Application', new_job_app_path, {class: "add-app-button", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
-		<div class="index-table-header">
-			<h2>
-				Job Applications
-			</h2>
-			<div class="color-bar">
+	<% if @applications.any? || @interviews.any? || @applications.any? || @offers.any? || @rejected.any? %>
+		<%= link_to '+', new_job_app_path, {class: "add-app-button", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+		<% count = 0 %>
+		<% if @interviews.any? %>
+			<% count += 1 %>
+			<div class="index-table-header">
+				<h2>
+					Interviews
+				</h2>
+				<% colorStr = 'color-'+count.to_s %>
+				<div class="color-bar "id=<%= colorStr%>></div>
 			</div>
 
-		<div class="job-apps-box">
-			<% @job_apps.each do |job_app| %>
-				<%= link_to job_app_path(job_app), {class: "index-table-row", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} do %>
-					<div class="company-name"><%= job_app.company %></div>
-					<div class="position-name"><%= job_app.position_name %></div>
-					<div class="job-app-status"><%= job_app.status %></div>
-					<div class="submit-date"><%= job_app.submit_date %></div>
+			<div class="scrolling-wrapper">
+				<% @interviews.each_with_index do |job_app, index| %>
+					<%= link_to job_app_path(job_app), {class: "job-card ", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} do %>
+						<div class="company-name"><%= job_app.company %></div>
+						<div class="position-name"><%= job_app.position_name %></div>
+					<% end %>
 				<% end %>
-			<% end %>
-		</div>
+			</div>
+		<% end %>
+
+		<% if @applications.any? %>
+			<% count += 1 %>
+			<div class="index-table-header">
+				<h2>
+					Applications
+				</h2>
+				<% colorStr = 'color-'+count.to_s %>
+				<div class="color-bar "id=<%= colorStr%>></div>
+			</div>
+
+			<div class="scrolling-wrapper">
+				<% @applications.each do |job_app| %>
+					<%= link_to job_app_path(job_app), {class: "job-card", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} do %>
+						<div class="company-name"><%= job_app.company %></div>
+						<div class="position-name"><%= job_app.position_name %></div>
+					<% end %>
+				<% end %>
+			</div>
+		<% end %>
+
+		<% if @offers.any? %>
+			<% count += 1 %>
+			<div class="index-table-header">
+				<h2>
+					Offers
+				</h2>
+				<% colorStr = 'color-'+count.to_s %>
+				<div class="color-bar "id=<%= colorStr%>></div>
+			</div>
+
+			<div class="scrolling-wrapper">
+				<% @offers.each do |job_app| %>
+					<%= link_to job_app_path(job_app), {class: "job-card", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} do %>
+						<div class="company-name"><%= job_app.company %></div>
+						<div class="position-name"><%= job_app.position_name %></div>
+					<% end %>
+				<% end %>
+			</div>
+		<% end %>
+
+		<% if @rejected.any? %>
+			<% count += 1 %>
+			<div class="index-table-header">
+				<h2>
+					Rejected
+				</h2>
+				<% colorStr = 'color-'+count.to_s %>
+				<div class="color-bar "id=<%= colorStr%>></div>
+			</div>
+
+			<div class="scrolling-wrapper">
+				<% @rejected.each do |job_app| %>
+					<%= link_to job_app_path(job_app), {class: "job-card", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} do %>
+						<div class="company-name"><%= job_app.company %></div>
+						<div class="position-name"><%= job_app.position_name %></div>
+					<% end %>
+				<% end %>
+			</div>
+		<% end %>
 	<% else %>
 		<div class="empty-prompt"><h2>Store a job application!</h2></div>
 		<%= link_to 'Add Application', new_job_app_path, {class: "add-app-button", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>

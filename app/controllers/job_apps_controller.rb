@@ -1,6 +1,10 @@
 class JobAppsController < ApplicationController
 	def index
-		@job_apps = current_user.jobApps.all
+		@interviews = current_user.jobApps.where(status: "Interview")
+		@applications = current_user.jobApps.where(status: "Applied")
+		@offers = current_user.jobApps.where(status: "Offer")
+		@rejected = current_user.jobApps.where(status: "Rejected")
+		@saved = current_user.jobApps.where(status: "Saved For Later")
 	end
 
 	def show

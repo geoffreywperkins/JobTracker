@@ -1,13 +1,12 @@
 <div class="index-page-box">
 	<% if @job_apps.any? %>
-	<%= link_to 'Add Application', edit_job_path, {class: "add-app-button", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+		<%= link_to 'Add Application', new_job_app_path, {class: "add-app-button", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
 		<div class="index-table-header">
 			<h2>
 				Job Applications
 			</h2>
 			<div class="color-bar">
 			</div>
-		</div>
 
 		<div class="job-apps-box">
 			<% @job_apps.each do |job_app| %>
@@ -21,7 +20,7 @@
 		</div>
 	<% else %>
 		<div class="empty-prompt"><h2>Store a job application!</h2></div>
-		<%= link_to 'Add Application', edit_job_path, {class: "add-app-button", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+		<%= link_to 'Add Application', new_job_app_path, {class: "add-app-button", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
 	<% end %>
 	<div id="modal-window" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 

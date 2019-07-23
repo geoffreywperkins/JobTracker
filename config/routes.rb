@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get "job_apps/edit_job" => 'job_apps#edit_job', :as => :edit_job
 
   resources :job_apps
   root 'welcome#index'

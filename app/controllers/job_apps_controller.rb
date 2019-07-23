@@ -5,10 +5,18 @@ class JobAppsController < ApplicationController
 
 	def show
 		@job_app = find_job_app
+		respond_to do |format|
+			format.html
+			format.js
+		end
 	end
 
 	def new
 		@job_app = current_user.jobApps.new
+		respond_to do |format|
+			format.html
+			format.js
+		end
 	end
 
 	def edit
@@ -36,14 +44,6 @@ class JobAppsController < ApplicationController
 		@article.destroy
 
 		redirect_to job_apps_path
-	end
-
-	def edit_job
-		@job_app = current_user.jobApps.new
-	  respond_to do |format|
-	    format.html
-	    format.js
-	  end
 	end
 
 	private

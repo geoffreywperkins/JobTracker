@@ -1,11 +1,54 @@
 <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
-       <h3 id="myModalLabel">New Application</h3>
-       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-     </div>
+			<h3 id="myModalLabel">New Application</h3>
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		</div>
     <div class="modal-body center-box d-flex justify-content-center flex-column align-items-center">
-      <%= render 'form' %>
+      <%= form_for @job_app do |f| %>
+
+				<% if @job_app.errors.any? %>
+			    <div id="error_explanation">
+			    	<p>ERROR: The "Company" and "Status" fields are required</p>
+			    </div>
+			  	<% end %>
+
+			  	<div class="field devise-field form-group">
+					<%= f.label :company, "Company (required)" %><br>
+					<%= f.text_field :company %>
+				</div>
+
+				<div class="field devise-field form-group">
+					<%= f.label :position_name, "Position Name (required)" %><br>
+					<%= f.text_field :position_name %><br>
+				</div>
+
+				<div class="field devise-field form-group">
+					<%= f.label :status, "Status (required)" %><br>
+					<!-- <%= f.select(:status, ["Saved for later", "Applied", "Interview", "Offer", "Rejected"], {}, { onchange: "this.form.submit();" }) %> -->
+					<%= f.select(:status, ["Saved for later", "Applied", "Interview", "Offer", "Rejected"], {}) %>
+				</div>
+
+				<div class="field devise-field form-group">
+					<%= f.label :submit_date, "Submit Date (YYYY-MM-DD)" %><br>
+					<%= f.text_field :submit_date, {'type'=>"text", 'data-provide'=>'datepicker'} %>
+				</div>
+
+				<div class="filed devise-field form-group">
+					<%= f.label :url %><br>
+					<%= f.text_field :url %>
+				</div>
+
+				<div class="field devise-field form-group">
+					<%= f.label :notes %><br>
+					<%= f.text_area :notes %><br>
+				</div>
+
+				<div class="actions d-flex justify-content-center devise-button align-items-center">
+		      <%= f.submit "Add" %>
+		    </div>
+
+			<% end %>
     </div>
   </div>
 </div>

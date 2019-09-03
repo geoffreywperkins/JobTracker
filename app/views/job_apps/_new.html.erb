@@ -31,7 +31,7 @@
 
 				<div class="field devise-field form-group">
 					<%= f.label :submit_date, "Submit Date (YYYY-MM-DD)" %><br>
-					<%= f.text_field :submit_date, {'type'=>"text", 'data-provide'=>'datepicker'} %>
+					<%= f.text_field :submit_date, :value => Date.today.to_s, class: "datepicker" %>
 				</div>
 
 				<div class="filed devise-field form-group">

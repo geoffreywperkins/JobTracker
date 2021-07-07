@@ -9,13 +9,13 @@ development:
   <<: *default
   database: myapp_development
   username: postgres
-  password: jobTrackerAdmin
+  password: postgres
 
 test:
   <<: *default
   database: myapp_test
   username: postgres
-  password: jobTrackerAdmin
+  password: postgres
 
 production:
   <<: *default
